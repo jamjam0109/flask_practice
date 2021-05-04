@@ -33,17 +33,22 @@
                     <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
                         <input class="form-control" type=file name=photo id="fileName" accept=".jpg,.jpeg,.png" onchange="validateFileType()">
                         <p></p>
-                        <input type="submit" id="btn-submit" class="btn btn-primary btn-lg" value="Upload" disabled>
+                        <input class="btn btn-primary btn-lg" type="submit" id="btn-submit" value="Upload" disabled>
                     </form>
                 </div>
                 <div class="mx-auto mt-3" style="font-size: 80%;">
                     or try one of these
-                    <img class="rounded mx-auto d-block" id="ex1" src="/static/assets/image/example_1.jpg" width="40" height="40" style="cursor:pointer;">
-                    <img class="rounded mx-auto d-block" id="ex2" src="/static/assets/image/example_2.jpg" width="40" height="40" style="cursor:pointer;">
+                </div>
+                <div class="row">
+                        <div class="col">
+                            <img id="ex1" src="/static/assets/image/example_1.jpg" width="40" height="40" style="cursor:pointer;">
+                        </div>
+                        <div class="col">
+                            <img id="ex2" src="/static/assets/image/example_2.jpg" width="40" height="40" style="cursor:pointer;">
+                        </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
