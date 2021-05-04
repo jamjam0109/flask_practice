@@ -1,6 +1,6 @@
 import model 
 from utils import file_rename
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 
@@ -36,7 +36,7 @@ def upload():
             )
  
     return render_template('index.html')
- 
- 
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=40001)
