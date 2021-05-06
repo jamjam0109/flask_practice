@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 static/uploads/
-*.gif
+static/assets/usage.gif
