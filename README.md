@@ -20,6 +20,7 @@ $ pip install -r requirements.txt
 ## flask_uploads.py 수정 
 - ~/venv/lib/python3.x/site-packages/flask_uploads.py 의 384번째 라인 수정
 - secure_filename 함수 제거 
+
 변경 전 
 ```python
 return lowercase_ext(secure_filename(filename))
