@@ -1,23 +1,36 @@
 ![](static/assets/usage.gif)
 
-## 1. git clone 
+## git clone 
 ```console
 $ git clone https://github.com/jamjam0109/mbo.git
 $ cd mbo 
 ```
 
-## 2. virtualenv 세팅
+## virtualenv 세팅
 ```console
 $ virtualenv venv 
 $ source venv/bin/activate
 ```
 
-## 3. pip install
+## pip install
 ```console
 $ pip install -r requirements.txt
 ```
- 
-## 4. 실행 
+
+## flask_uploads.py 수정 
+- ~/venv/lib/python3.x/site-packages/flask_uploads.py 의 384번째 라인 수정
+- secure_filename 함수 제거 
+변경 전 
+```python
+return lowercase_ext(secure_filename(filename))
+```
+---
+변경 후 
+```python
+return lowercase_ext(filename)
+```
+
+## 실행 
 ```console
 $ python app.py
 ```

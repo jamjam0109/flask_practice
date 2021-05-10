@@ -18,7 +18,7 @@ configure_uploads(app, photos)
 @app.route('/output', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST' and 'photo' in request.files:
-        
+
         try:
             filename = photos.save(request.files['photo'])
             filename = app.config['UPLOADED_PHOTOS_DEST'] + '/' + filename
